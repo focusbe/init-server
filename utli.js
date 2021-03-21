@@ -18,9 +18,9 @@ function exec(execStr) {
     //   console.error(`${data}`);
     //   reject(data);
     // });
-    // ls.on('close', (code) => {
-    //   resolve(code);
-    // });
+    ls.on('close', (code) => {
+      resolve(code);
+    });
   });
 }
 module.exports = { exec };
