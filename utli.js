@@ -7,6 +7,9 @@ function exec(execStr) {
     const execArr = execStr.replace(/\s+/g, ' ').split(' ');
     const command = execArr.shift();
     const ls = spawn(command, execArr, {});
+    ls.on('data',(data)=>{
+      console.log(data);
+    })
     // ls.stdout.on('data', (data) => {
     //   console.log(`${data}`);
     // });
