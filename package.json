@@ -1,10 +1,11 @@
 {
-  "name": "server-init-sh",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@focusbe/init-server",
+  "version": "1.0.1",
+  "description": "初始化服务器",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub" :"npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/focusbe/server-init-sh/issues"
   },
-  "homepage": "https://github.com/focusbe/server-init-sh#readme"
+  "bin": {
+    "focusbe-init-server": "main.js"
+  },
+  "homepage": "https://github.com/focusbe/server-init-sh#readme",
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
 }
